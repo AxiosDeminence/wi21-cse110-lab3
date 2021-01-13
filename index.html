@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juhmer Tena's lab 2</title>
+    <meta name="author" content="Juhmer Tena">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Juhmer Tena's lab 2</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#main">This goes to main</a>
+            </li>
+            <li>
+                <a href="#footer">This goes to footer</a>
+            </li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main id="main">
+        <section>
+            <div id="morning-routine">
+                <h2>
+                    My morning route
+                </h2>
+                <ol>
+                    <li>Wake up</li>
+                    <li>Look at clock</li>
+                    <li>Go back to sleep</li>
+                    <li>Repeat n times</li>
+                    <li>Eventually get out of bed</li>
+                    <li>Eat breakfast</li>
+                    <li>Bruh my teeth</li>
+                    <li>Begin the rest of my day</li>
+                </ol>
+            </div>
+
+            <div id="morning-routine__explanation">
+                <h3>
+                    Explanation
+                </h3>
+                <p>
+                    There isn't much of an excuse for this except that I am
+                    pretty much a complete night owl. Although there are
+                    times when I can get up early, especially when it is for
+                    something important, I feel exhausted even with 9 hours
+                    of sleep.
+                </p>
+            </div>
+        </section>
+
+        
+        <section>
+            <div id="interesting-things">
+                <h2>Some stuff I found interesting when learning html/css</h2>
+                <p>
+                    Before I learned html/css, I often browsed and participated
+                    in forums that used bbcode. Many of the forums that I go
+                    to now has their software favoring
+                    <abbr title="What you see is what you get">wysiwg</abbr>
+                    editors over BBcode. So some of the stuff I learned was new
+                    and some of the stuff was old. For example:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b>Bold</b> elements have <strong>two</strong> tag options
+                            (<code>&lt;b&gt;content&lt;/b&gt;</code> and <code>&lt;strong&gt;content&lt;/strong&gt;</code>).
+                            <br>
+                            BBCode had only one option: <code>[b]content[/b]</code>.
+                        <p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <i>Italicized</i> elements have <em>two</em> tag options as well!
+                            (<code>&lt;i&gt;content&lt;/i&gt;</code> and <code>&lt;em&gt;content&lt;/em&gt;</code>). 
+                            BBCode once again only had one options: <code>[i]content[/i]</code>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Line breaks in BBCode were generally handled as is. You broke a line
+                            and it showed up in the post. Usually it got translated to a bunch of
+                            <code>&lt;p&gt;</code> tags for the browser to parse.
+                        </p>
+
+                        <pre>
+                            To be fair, it seems like it'd be easier to use the &lt;p&gt;
+                            tags over this &lt;pre&gt; tag I'm using right now and maybe
+                            even one &lt;p&gt; tag with &lt;br&gt; tags like I did
+                            earlier. They might even be a more proper use case though I
+                            am hesitant to say that with my limited web-dev experience.
+                        </pre>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Multi-media stuffs!</h2>
+
+            <h3>Here's a (responsive) picture of myself and a logo</h3>
+            <picture>
+                <source srcset="images/professional_photo.JPG" media="(min-width: 600px)">
+                <!-- I am not affiliated with duckduckgo, but I think this is useful to show the use of picture tags -->
+                <img src="https://duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png" alt="professional photo.jpg">
+            </picture>
+
+            <h3>Here's an iframe of my first lab for cse 110</h3>
+            <iframe src="https://axiosdeminence.github.io/lab1/" frameborder="0" height="600px"></iframe>
+
+            <h3>Here's some audio</h3>
+            <audio controls>
+                <source src="audio/Sample-OGG-File.ogg" type="audio/ogg">
+                <source src="audio/Kalimba.mp3" type="audio/mpeg">
+                <source src="audio/Sample-wav-file.wav" type="audio/wav">
+            </audio>
+
+            <h3>Here's a video</h3>
+            <video controls>
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-avi-file.avi" type="video/avi">
+            </video>
+
+            <h3>Here's an interactable button that can draw a line onto a canvas</h3>
+            <div id="canvas-example">
+                <canvas id="draw-my-canvas" width="200px" height="200px"></canvas>
+                <script>
+                    function drawLine() {
+                        let canvas = document.getElementById("draw-my-canvas");
+                        let drawer = canvas.getContext("2d");
+                        drawer.moveTo(0,100);
+                        drawer.lineTo(200,100);
+                        drawer.stroke();
+                    }
+                </script>
+                <button onclick="drawLine()">Draw that line!</button>
+            </div>
+
+            <h3>Here's an svg element</h3>
+            <svg width="200px" height="200px">
+                <circle cx="40px" cy="100px" r="40px"></circle>
+            </svg>
+        </section>
+
+        <section>
+            <div id="dnd-resources">
+                <h2>
+                    Quick lookup for DnD stuff
+                </h2>
+                
+                <table id="core-races">
+                    <caption>The ability score bonuses for base races in DnD 5e</caption>
+                    <colgroup>
+                        <col span="1">
+                        <col span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Race</th>
+                            <th>Primary bonus</th>
+                            <th>Secondary bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dragonborn</td>
+                            <td>Strength +2</td>
+                            <td>Charisma +1</td>
+                        </tr>
+                        <tr>
+                            <td>Hill Dwarf</td>
+                            <td>Constitution +2</td>
+                            <td>Wisdom +1</td>
+                        </tr>
+                        <tr>
+                            <td>Mountain Dwarf</td>
+                            <td>Constitution +2</td>
+                            <td>Strength +1</td>
+                        </tr>
+                        <tr>
+                            <td>High Elf</td>
+                            <td>Dexterity +2</td>
+                            <td>Intelligence +1</td>
+                        </tr>
+                        <tr>
+                            <td>Wood Elf</td>
+                            <td>Dexterity +2</td>
+                            <td>Wisdom +1</td>
+                        </tr>
+                        <tr>
+                            <td>Deep Gnome</td>
+                            <td>Intelligence +2</td>
+                            <td>Dexterity +1</td>
+                        </tr>
+                        <tr>
+                            <td>Rock Gnome</td>
+                            <td>Intelligence +2</td>
+                            <td>Constitution +1</td>
+                        </tr>
+                        <tr>
+                            <td>Half-Elf</td>
+                            <td>Charisma </td>
+                            <td>Two ability scores +1</td>
+                        </tr>
+                        <tr>
+                            <td>Lightfoot Halfling</td>
+                            <td>Dexterity +2</td>
+                            <td>Charisma +1</td>
+                        </tr>
+                        <tr>
+                            <td>Stout Halfling</td>
+                            <td>Dexterity +2</td>
+                            <td>Constitution +1</td>
+                        </tr>
+                        <tr>
+                            <td>Half-Orc</td>
+                            <td>Strength +2</td>
+                            <td>Constitution +1</td>
+                        </tr>
+                        <tr>
+                            <td>Human</td>
+                            <td>All ability scores +1</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Tiefling</td>
+                            <td>Charisma +2</td>
+                            <td>Intelligence +1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <aside id="ability-score-modifiers">
+                    <figure id="ability-score-modifiers__table">
+                        <img src="images/figure.jpg" alt="figure.jpg">
+                        <figcaption>
+                            The table used for ability score modifiers. Can be
+                            used for quick-lookup whenever you forget your modifiers
+                        </figcaption>
+                    </figure>
+
+                    <details>
+                        <summary>A Quick Note on Using this table</summary>
+                        <p>
+                            Always make sure to build correctly not just to your class and race, but
+                            most importantly, make sure to build for your character. Remember
+                            the rule of cool and that enjoyment is the most important thing.
+                        </p>
+                    </details>
+                </aside>
+            </div>
+        </section>
+
+        <section>
+            <div id="star-wars-form">
+                <h2>A short form about Star Wars preferences</h2>
+                <form>
+                    <fieldset>
+                        <legend>Select the best trilogy of star wars</legend>
+
+                        <input type="radio" id="prequels" name="trilogy">
+                        <label for="prequels">Prequels (1/2/3)</label>
+                        <br>
+                        <input type="radio" id="original" name="trilogy">
+                        <label for="original">Original (4/5/6)</label>
+                        <br>
+                        <input type="radio" id="sequels" name="trilogy">
+                        <label for="sequels">Sequels (7/8/9)</label>
+                    </fieldset>
+                    <br>
+
+                    <label for="movie">Select your favorite star wars movie</label>
+                    <select id="movie">
+                        <optgroup label="Prequels">
+                            <option>Phantom Menace</option>
+                            <option>Attack of the Clones</option>
+                            <option>Revenge of the Sith</option>
+                        </optgroup>
+                        <optgroup label="Original">
+                            <option>A New Hope</option>
+                            <option>The Empire Strikes Back</option>
+                            <option>Return of the Jedi</option>
+                        </optgroup>
+                        <optgroup label="Sequels">
+                            <option>The Force Awakens</option>
+                            <option>The Last Jedi</option>
+                            <option>Rise of Skywalker</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="protagonist">Type your favorite protagonist</label>
+                    <input list="protagonist__list" id="protagonist" name="protagonist-choice">
+                    
+                    <datalist id="protagonist__list">
+                        <option value="Ben Kenobi"></option>
+                        <option value="Anakin Skywalker"></option>
+                        <option value="Luke Skywalker"></option>
+                        <option value="Princess Leia"></option>
+                        <option value="Han Solo"></option>
+                        <option value="R2-D2"></option>
+                        <option value="Rey Skywalker"></option>
+                        <option value="Finn"></option>
+                    </datalist>
+                    <br>
+                    <label for="explanation">Explain why:</label>
+                    <textarea id="explanation" name="explanation"></textarea>
+                </form>
+            </div>
+
+            <div id="misc-form">
+                <h2>A Form using the several input types</h2>
+
+                <form>
+                    <input type="button" onsubmit="preventDefault()" value="I made sure this button will not reload the page">
+                    <br><br>
+                    <label for="first-checkbox">This first checkbox should be checked</label>
+                    <input type="checkbox" id="first-checkbox" name="first-checkbox" checked>
+                    <br>
+                    <label for="second-checkbox">This second checkbox shouldn't be checked</label>
+                    <input type="checkbox" id="second-checkbox" name="second-checkbox">
+                    <br><br>
+                    <label for="tel-input">While this may seem like a text-box, it is actually a tel input</label>
+                    <input type="tel" id="tel-input" name="tel-input">
+                    <br><br>
+                    <label for="pass">Don't input your actual password here please, but at least it'll be blocked out</label>
+                    <input type="password" id="pass" name="pass">
+                    <br><br>
+                    <label for="single-line-text">Unlike the textarea, this is only one line</label>
+                    <input type="text" id="single-line-text" name="id">
+                    <br><br>
+                    <label for="file-submit">Upload a file but not actually upload it since this isn't connected to anything</label>
+                    <input type="file" id="file-submit" name="file-submit">
+                    <br><br>
+                    <label for="date-select">Select a date</label>
+                    <input type="date" id="date-select" name="data-select">
+                    <br><br>
+                    <label for="color-select">Select a color (not colorblind friendly)</label>
+                    <input type="color" id="color-select" name="color-select" value="#367c36">
+                    <br><br>
+                    <label for="slider">A Slider</label>
+                    <input type="range" id="slider" name="slider" min="-100" max="100">
+                    <br><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>And finally a section where you append some ipsum lorem!</h2>
+            
+            <div id="ipsumlorem">
+                <template id="ipsumlorem__template">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat. Nisl purus in mollis nunc sed id semper risus. Suspendisse sed nisi lacus sed viverra. Sollicitudin tempor id eu nisl nunc mi. Tortor at auctor urna nunc id cursus metus aliquam. Vestibulum morbi blandit cursus risus at ultrices mi. Tortor at auctor urna nunc id cursus metus aliquam. Eget gravida cum sociis natoque penatibus et magnis dis. Sit amet cursus sit amet dictum sit amet.</p>
+                </template>
+
+                <script>
+                    function addIpsumLorem() {
+                        let template = document.getElementById("ipsumlorem__template")
+
+                        let clone = template.content.cloneNode(true);
+                        document.getElementById("ipsumlorem").appendChild(clone);
+                    }
+                </script>
+
+                <button onclick="addIpsumLorem();">Add that ipsum lorem!</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <span>Any resources pictured here are not owned by me.</span> 
+    </footer>
+</body>
+</html>
