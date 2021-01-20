@@ -3,3 +3,10 @@
 * {
     background-color: #f0f0f0;
 }
+
+.section-block {
+    border-style: solid;
+    border-color: rgb(43, 43, 43);
+    border-width: 1px;
+    border-radius: 20px;
+}
