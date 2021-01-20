@@ -1,7 +1,10 @@
 /* Comment for lab 3 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     background-color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
 }
 
 section {
