@@ -102,6 +102,9 @@ button:active {
 #professional-photo {
     max-width: 30%;
     min-width: 20%;
+
+    position: relative;
+    left: 200px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -130,4 +133,54 @@ button:active {
 
 #dnd-resources > details {
     grid-area: disclaimer;
+}
+
+pre {
+    position: relative;
+    left: 150px;
+    top: 20px;
+}
+
+svg {
+    position: relative;
+    left: 85%;
+}
+
+figcaption {
+    margin: auto;
+    position: relative;
+    left: 300px;
+    bottom: 125px;
+    width: 300px;
+}
+
+#canvas-example {
+    position: relative;
+}
+
+#canvas-example > button {
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
+}
+
+#ipsumlorem {
+    position: relative;
+    height: 200px;
+}
+
+#ipsumlorem > button{
+    position: absolute;
+    right: 50%;
+    bottom: 20%;
+}
+
+#morning-routine {
+    position: relative;
+}
+
+#morning-routine > img {
+    position: absolute;
+    top: 5%;
+    right: 10%;
 }
