@@ -14,20 +14,20 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="topbar">
         <h1>Juhmer Tena's lab 2</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="#main">This goes to main</a>
-            </li>
-            <li>
-                <a href="#footer">This goes to footer</a>
-            </li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#main">This goes to main</a>
+                </li>
+                <li>
+                    <a href="#footer">This goes to footer</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <hr>
 
@@ -142,15 +142,9 @@
             <div id="canvas-example">
                 <canvas id="draw-my-canvas" width="200" height="200"></canvas>
                 <script>
-                    function drawLine() {
-                        let canvas = document.getElementById("draw-my-canvas");
-                        let drawer = canvas.getContext("2d");
-                        drawer.moveTo(0,100);
-                        drawer.lineTo(200,100);
-                        drawer.stroke();
-                    }
+                    // Empty script for now
                 </script>
-                <button onclick="drawLine()">Draw that line!</button>
+                <button onclick="e.preventDefault()">Draw that line!</button>
             </div>
 
             <h3>Here's an svg element</h3>
@@ -371,15 +365,10 @@
                 </template>
 
                 <script>
-                    function addIpsumLorem() {
-                        let template = document.getElementById("ipsumlorem__template")
-
-                        let clone = template.content.cloneNode(true);
-                        document.getElementById("ipsumlorem").appendChild(clone);
-                    }
+                    // empty script for now
                 </script>
 
-                <button onclick="addIpsumLorem();">Add that ipsum lorem!</button>
+                <button onclick="e.preventDefault()">Add that ipsum lorem!</button>
             </div>
         </section>
     </main>
@@ -387,5 +376,7 @@
     <footer id="footer">
         <span id="disclaimer" style="text-decoration:underline;text-align:center;color:gray;">Any resources pictured here are not owned by me.</span> 
     </footer>
+
+    <p>Hidden element</p>
 </body>
 </html>
