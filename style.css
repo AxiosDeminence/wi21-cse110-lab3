@@ -109,3 +109,25 @@ button:active {
         display: inline;
     }
 }
+
+#dnd-resources {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 800px 250px;
+
+    grid-template-areas:
+    "table figure"
+    "disclaimer disclaimer";
+}
+
+#core-races {
+    grid-area: table;
+}
+
+#ability-score-modifiers {
+    grid-area: figure;
+}
+
+#dnd-resources > details {
+    grid-area: disclaimer;
+}
