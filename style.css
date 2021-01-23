@@ -32,20 +32,33 @@ section {
     height: 100px;
 
     background-color: rgb(50, 115, 189, 0.6);
+
+    display: flex;
+    align-items: center;
 }
 
-#topbar > h1, #topbar > nav {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#topbar > h1, #topbar > nav, #topbar ul, #topbar li, #topbar a {
+#topbar * {
     background-color: initial;
+    text-align: center;
 }
 
-#topbar nav {
-    text-align: right;
-    width: 80%;
+#topbar li {
+    list-style: none;
+}
+
+#topbar > h1 {
+    flex: 2;
+    order: 3;
+}
+
+#topbar > h1 + h1 {
+    flex: 1;
+    order: 2;
+}
+
+#topbar > nav {
+    flex: 1;
+    order: 3;
 }
 
 main {
